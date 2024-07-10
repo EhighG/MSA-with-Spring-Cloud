@@ -1,0 +1,12 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discoveryservice
+
+eureka:
+  client:
+    register-with-eureka: false # 자신(인스턴스) 정보를 eureka 서버에 등록할지 여부. 이 인스턴스가 서버이므로, true면 자기 정보를 자신에게 등록하게 된다.
+    fetch-registry: false # eureka 서버로부터 등록된 인스턴스들의 정보를 가져올지 여부
+
