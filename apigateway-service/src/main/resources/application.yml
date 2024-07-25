@@ -39,4 +39,10 @@ spring:
           filters:
 #            - AddRequestHeader=second-request, second-request-header2
 #            - AddResponseHeader=second-response, second-response-header2
-            - CustomFilter
+            # 필터들만 전달할거라면 파라미터명 생략해도 되지만, 다른 파라미터들이 있으면 생략불가
+            - name: CustomFilter
+            - name: LoggingFilter
+              args:
+                baseMessage: Hi, there. LoggingFilter's base message
+                preLogger: true
+                postLogger: true
