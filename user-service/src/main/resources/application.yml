@@ -12,6 +12,10 @@ spring:
       settings:
         web-allow-others: true # allow external access to h2 console
       path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
 
 
 eureka:
