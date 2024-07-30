@@ -28,8 +28,12 @@ spring:
           uri: lb://USER-SERVICE # predicates에 명시된 endpoint로 들어온 요청을 매핑시킬 uri
           predicates:
             - Path=/user-service/**
+        - id: catalog-service
+          uri: lb://CATALOG-SERVICE
+          predicates:
+            - Path=/catalog-service/**
         - id: first-service
-          uri: lb://MY-FIRST-SERVICE # predicates에 명시된 endpoint로 들어온 요청을 매핑시킬 uri
+          uri: lb://MY-FIRST-SERVICE
           predicates:
             - Path=/first-service/**
           filters:
